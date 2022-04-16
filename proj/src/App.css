@@ -1,0 +1,63 @@
+.nav-right {
+  display: flex;
+}
+.nav-right * {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 30%;
+}
+
+.nav-right #log {
+  color: #ffffff;
+  font-weight: bold;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #53486b;
+}
+
+.nav-links a {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav-links li a:hover,
+.nav-right #log:hover {
+  color: #ffff99;
+}
+
+.sign-up-btn {
+  padding: 9px 25px;
+  background-color: #89edfa;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #53486b;
+  text-decoration: none;
+}
+
+.sign-up-btn:hover {
+  background-color: #ffff99;
+}
