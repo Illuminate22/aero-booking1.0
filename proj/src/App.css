@@ -12,6 +12,10 @@
   font-weight: bold;
 }
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,3 +65,67 @@ header {
 .sign-up-btn:hover {
   background-color: #ffff99;
 }
+/* 
+.form-signin {
+  width: 370px;
+  height: 350px;
+  padding: 15px;
+  margin: auto;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgba(255, 255, 255, 0.993);
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: rgba(255, 255, 255, 0.993);
+} */
+
+.loginbox {
+  width: 450px;
+  height: 400px;
+  background: #c9efff;
+  color: #53486b;
+  padding: 20px;
+  margin: auto;
+  /* margin: 30% 0px 10% 2 0%; */
+  /* margin-top: 15%;
+  margin-left: 12%; */
+  /* background-color: rgb(245, 245, 245); */
+
+  /* top: 50%; */
+  /* left: 50%; */
+  /* position: absolute; */
+  /* transform: translate(-50%, 50%); */
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.form-container #sub_log {
+  background-color: #53486b;
+  color: #ffffff;
+}
+.form-container * {
+  padding: 20px;
+}
+
+/* 
+.loginbox {
+
+} */
