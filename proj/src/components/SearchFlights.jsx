@@ -2,7 +2,11 @@ import { useState } from "react";
 
 const SearchFlights = () => {
 
+<<<<<<< HEAD
     
+=======
+    const [ret, setRet] = useState(false)
+>>>>>>> origin/master
     function roundtrip() {
         const round = document.querySelector("#round")
         const retrn = document.querySelector("#returnDate")
@@ -40,8 +44,13 @@ const SearchFlights = () => {
             <div className="row">
                 <div className="col">
                     <p>From</p>
+<<<<<<< HEAD
                     <select defaultValue="default" className="form-select" id="from">
                         <option value="default">Choose an airport</option>
+=======
+                    <select className="form-select" id="from">
+                        <option selected>Choose an airport</option>
+>>>>>>> origin/master
                         <option value="Bengaluru, IN">Bengaluru, IN</option>
                         <option value="New Delhi, IN">New Delhi, IN</option>
                         <option value="Chennai, IN">Chennai, IN</option>
@@ -52,8 +61,13 @@ const SearchFlights = () => {
                 <button onClick={handleRev} className="btn btn-primary btn-sm m-1 col-1">rev</button>
                 <div className="col">
                     <p>To</p>
+<<<<<<< HEAD
                     <select defaultValue="default" className="form-select" id="to">
                         <option value="default">Choose an airport</option>
+=======
+                    <select className="form-select" id="to">
+                        <option selected>Choose an airport</option>
+>>>>>>> origin/master
                         <option value="Bengaluru, IN">Bengaluru, IN</option>
                         <option value="New Delhi, IN">New Delhi, IN</option>
                         <option value="Chennai, IN">Chennai, IN</option>
@@ -75,7 +89,11 @@ const SearchFlights = () => {
             <div className="row">
                 <div className="col">
                     <p>Number of Passengers</p>
+<<<<<<< HEAD
                     <input type="number" min={1} className="form-control" />
+=======
+                    <input type="number" className="form-control" />
+>>>>>>> origin/master
                 </div>
                 <div className="col">
                     <p>Class</p>

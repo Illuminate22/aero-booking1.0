@@ -64,3 +64,50 @@ header {
 .sign-up-btn:hover {
   background-color: #ffff99;
 }
+<<<<<<< HEAD
+=======
+.loginbox {
+  width: 450px;
+  height: 400px;
+  background: #c9efff;
+  color: #53486b;
+  padding: 20px;
+  margin: auto;
+
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.form-container #sub_log {
+  background-color: #53486b;
+  color: #ffffff;
+}
+.form-container * {
+  padding: 15px;
+}
+
+.nav-pad{
+  padding-top: 125px;
+}
+
+.bcontent {
+  margin-top: 30px;
+}
+
+.h-card{
+  background-color: #FBEAEB;
+  border-radius: 10px;
+  border: #000000;
+  border-style: ridge;
+
+}
+
+.h-card-size{
+  width: 900px;
+}
+@media screen and (max-width: 950px) {
+  .h-card-size{
+    width: 90%;
+  }
+}
+>>>>>>> origin/master
