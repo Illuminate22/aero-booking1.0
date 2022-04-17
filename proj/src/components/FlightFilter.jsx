@@ -59,7 +59,7 @@ const FlightFilter = ({props}) => {
                 temp2.push(props[0][i])
             }
         }
-        props[2](...temp2)
+        // props[2](...temp2)
         console.log(temp2)
     }
 

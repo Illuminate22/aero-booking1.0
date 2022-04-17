@@ -7,6 +7,10 @@ import SearchBox from './components/SearchBox';
 import SearchFlights from './components/SearchFlights';
 import Searchtabs from './components/Searchtabs';
 import FlightFilter from './components/FlightFilter';
+import FareDetails from './components/FareDetails'
+import PassengerDetails from './components/PassengerDetails'
+import PassengerInput from './components/PassengerInput'
+import SummaryBox from './components/SummaryBox' 
 import {useState} from "react";
 
 function App() {
@@ -73,6 +77,10 @@ function App() {
       {/* <SearchBox/> */}
       {/* <SearchFlights/> */}
       {/* <Searchtabs/> */}
+      {/* <FareDetails/> */}
+      {/* <PassengerDetails/> */}
+      {/* <PassengerInput/> */}
+      {/* <SummaryBox/> */}
     </div>
   );
 }

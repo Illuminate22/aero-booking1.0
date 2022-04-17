@@ -20,6 +20,8 @@ const DispFlights = ({props}) => {
                 {arr.map((flight) => (<li style={{listStyle: "none"}}><a href="#" >{flight.company + "   "+flight.number}</a></li>))}
             </ul> */}
 
+    console.log(company)
+
     const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
     return (
         <section className='nav-pad text-center' >  
@@ -44,7 +46,7 @@ const DispFlights = ({props}) => {
                         </div>
                         <div className="col-sm-7">
                             <div className='card-body '>
-                                <h5 className='card-title' style={{color: "#53486b", fontSize: "25px"}}><b>{company[flight.number%4][0]}</b></h5>
+                                <h5 className='card-title' style={{color: "#53486b", fontSize: "25px"}}><b>{names[flight.number%4]}</b></h5>
                                 <p className='cad-text'><b>Price</b>{" : " + rand(200, 1000) + "$"}</p>
                                 <a className='btn btn-primary'>enter</a>
                             </div>
