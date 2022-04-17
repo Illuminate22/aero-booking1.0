@@ -1,7 +1,7 @@
 const PassengerInput = () => {
     return ( 
         <>
-            <div className="row nav-pad">
+            <div className="row">
                 <input required type="text" className="col form-control" name="First Name" id="fname" placeholder="First Name" />
                 <input required type="text" className="col form-control" name="Last Name" id="lname" placeholder="Last Name" />
                 <input required type="number" name="age" id="age" min={0} className="col form-control" placeholder="Age"  />

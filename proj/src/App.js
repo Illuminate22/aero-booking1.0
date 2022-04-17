@@ -12,6 +12,11 @@ import PassengerDetails from './components/PassengerDetails'
 import PassengerInput from './components/PassengerInput'
 import SummaryBox from './components/SummaryBox' 
 import {useState} from "react";
+import { Route, Routes} from 'react-router-dom';
+import SearchScreen from './screens/SearchScreen';
+import LoginScreen from './screens/LoginScreen';
+import SignUpScreen from './screens/SignUpScreen';
+import DisplayScreen from './screens/DisplayScreen';
 
 function App() {
   const tabs = [
@@ -29,11 +34,7 @@ function App() {
   },
   ]
 
-  const flights = [];
-  for(let i =0; i<25; i++){
-    flights.push({company: String.fromCharCode(i+97), number: i+97})
-    // console.log(String.fromCharCode(i))
-  }
+
   const names = [
     [
       "Emirates",0
@@ -48,8 +49,20 @@ function App() {
       "Lufthansa",3
     ]
   ]
-   
 
+  const flights_un = [];
+  for(let i =0; i<25; i++){
+    flights_un.push({company: names[i%4][0], number: i})
+    // console.log(String.fromCharCode(i))
+  }
+
+   
+  const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+  var prices = []
+  for(let i in flights_un){
+      prices.push(rand(200, 1000))
+  }
   
 
   const from = "Delhi"
@@ -58,22 +71,23 @@ function App() {
   const arr_date = "14/05/2022"
 
   const [company, setCompany] = useState(names)
-
+  const [flights, setFlights] = useState(flights_un)
+  const [priceIdx, setPriceIdx] = useState([...Array(25).keys()])
 
 
   const signIn = (email) => {
       console.log(email)
   }
 
-  return (
-    <div>
-       <Nav tabs={tabs}/>
+  // return (
+    // <div>
+       {/* <Nav tabs={tabs}/> */}
        {/* <Nav tabs={tabs}/> */}
 
-       <FlightFilter props={[names, company, setCompany]}/>
+       {/* <FlightFilter props={[names, company, setCompany, flights, setFlights, flights_un, priceIdx, setPriceIdx, prices]}/> */}
 
       {/* <Login onAdd = {signIn}/>  */}
-      <DispFlights props={[names, company, from, to, dep_date, arr_date, flights]}/>
+      {/* <DispFlights props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices]}/> */}
       {/* <SearchBox/> */}
       {/* <SearchFlights/> */}
       {/* <Searchtabs/> */}
@@ -81,7 +95,23 @@ function App() {
       {/* <PassengerDetails/> */}
       {/* <PassengerInput/> */}
       {/* <SummaryBox/> */}
-    </div>
+    {/* </div> */}
+  // );
+  
+    //    <BookingScreen props = {[tabs]} />
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchScreen props={[tabs]}/>}></Route> 
+        <Route path="/login" element={<LoginScreen props={tabs}/>}></Route>
+        <Route path="/sign" element={<SignUpScreen props={tabs}/>}></Route>
+        <Route path="/view_flights" element={<DisplayScreen props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices, tabs]}/>}></Route>
+        <Route path="/book" element={<BookingScreen props={[tabs]}/>}></Route>
+      </Routes>
+    </BrowserRouter>
+
+
   );
 }
 

@@ -16,10 +16,11 @@ const FlightFilter = ({props}) => {
     // const company = props[1]
     // console.log(company)
     // console.log("hello ",props)
-    console.log(props)
+    // console.log(props)
 
     const [search, setSearch] = useState('');
     const [checkS, setCheckS] = useState(props[0]);
+    const [range, setRange] = useState(200)
 
     var check_arr = []
     for(let i in props[0]){
@@ -54,13 +55,16 @@ const FlightFilter = ({props}) => {
     }
     const onApply = (e) =>{
         let temp2 = []
-        for(let i in props[0]){
-            if(checkbox[i]){
-                temp2.push(props[0][i])
+        console.log(props[5])
+
+        console.log(checkbox)
+        for(let i=1; i<props[5].length; i++){
+            if(checkbox[(i)%4]){
+                temp2.push(props[5][i-1])
             }
         }
-        // props[2](...temp2)
-        console.log(temp2)
+        props[4](temp2)
+        // console.log(props[3])
     }
 
 
@@ -75,7 +79,7 @@ const FlightFilter = ({props}) => {
                     <Accordion defaultActiveKey="1"  >
                         <Accordion.Header ><span className="btn btn-warning m-2"><b>Price</b></span></Accordion.Header>
                         <Accordion.Body>
-                            <input type="range"></input>
+                            <input type="range" min={200} max={1000} onChange={(e) => setRange(e.target.value) } value ={range}></input>
                             <div className="d-flex justify-content-between">
                                 <label>1000</label>
                                 <label>2000</label>
