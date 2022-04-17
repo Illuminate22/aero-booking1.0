@@ -4,7 +4,7 @@ const Nav = ({tabs}) => {
     <header>
         <nav>
             <ul className="nav-links">
-                {tabs.map((tab) => (<li><a href="#">{tab.name}</a></li>))}
+                {tabs.map((tab) => (<li key={tab.id}><a href="#" >{tab.name}</a></li>))}
             </ul>
         </nav>
         <nav className="nav-right">

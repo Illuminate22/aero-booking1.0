@@ -1,5 +1,6 @@
 .nav-right {
   display: flex;
+  align-items: center;
 }
 .nav-right * {
   display: flex;
@@ -34,6 +35,8 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
+  margin-bottom: 0%;
 }
 
 .nav-links li {
@@ -85,7 +88,7 @@ header {
   padding: 15px;
 }
 
-.nav_pad{
+.nav-pad{
   padding-top: 125px;
 }
 
@@ -98,7 +101,6 @@ header {
   border-radius: 10px;
   border: #000000;
   border-style: ridge;
-  /* border: 1; */
 
 }
 
@@ -106,7 +108,6 @@ header {
   width: 900px;
 }
 @media screen and (max-width: 950px) {
-  /* For desktop: */
   .h-card-size{
     width: 90%;
   }

@@ -3,6 +3,11 @@ import './App.css';
 import Nav from './components/Nav';
 import Login from './components/Login';
 import DispFlights from './components/DispFlights';
+import SearchBox from './components/SearchBox';
+import SearchFlights from './components/SearchFlights';
+import Searchtabs from './components/Searchtabs';
+import FlightFilter from './components/FlightFilter';
+
 
 function App() {
   const tabs = [
@@ -19,15 +24,23 @@ function App() {
     name: "Logout"
   },
   ]
+
+  const signIn = (email) => {
+      console.log(email)
+  }
+
   return (
     <div>
-       <Nav tabs={tabs}/>
        {/* <Nav tabs={tabs}/> */}
+       <Nav tabs={tabs}/>
 
        
-      {/* <Login/>  */}
+      {/* <Login onAdd = {signIn}/>  */}
       <DispFlights/>
-
+      {/* <SearchBox/> */}
+      {/* <SearchFlights/> */}
+      {/* <Searchtabs/> */}
+      {/* <FlightFilter/> */}
     </div>
   );
 }

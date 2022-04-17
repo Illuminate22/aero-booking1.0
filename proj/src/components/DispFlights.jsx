@@ -24,7 +24,7 @@ const DispFlights = () => {
 
     const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
     return (
-        <section className='nav_pad text-center' >  
+        <section className='nav-pad text-center' >  
             <section>
                 <label style={{fontSize: "20px", fontWeight: "bold", backgroundColor: "#89edfa", borderRadius: "10px", padding: "10px"}}>{from}</label>
                 <span style={{fontWeight:"bold", fontSize: "40px"}}>&emsp; &#x2192; &emsp;</span>
