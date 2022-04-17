@@ -15,14 +15,14 @@ const PassengerDetails = () => {
     }
     return ( 
     <>
-        <div className="container border nav-pad">
+        <div className="container border nav-pad " style={{background: "#ffffc0"}}>
             <h1>Passenger Details</h1>
             <div className="row">
                 <input type="number" name="numpass" min={1} defaultValue={1} onChange={handleNum} className="col-1" id="numpass" />
-                <label htmlFor="numpass" className="col">Number of Passengers</label>
+                <label htmlFor="numpass" className="col m-2">Number of Passengers</label>
             </div>
-            <div className="passinput">
-            {dummyarray.map((i) => (<PassengerInput key={i} />))}
+            <div className="passinput  sub-box">
+            {dummyarray.map((i) => (<><PassengerInput key={i} /><p></p></>))}
             </div>
             <div className="row">
                 <p className="col">Contact Details</p>

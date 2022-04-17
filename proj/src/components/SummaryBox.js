@@ -18,7 +18,7 @@ const SummaryBox = () => {
     }
     return ( 
         <>
-            <div className="container row border align-items-center nav-pad">
+            <div className="container row border align-items-center nav-pad sum-box mx-auto" style={{width: "1100px", background: "#c5fce9"}}>
                 <div className="col">
                     <p className="mb-0">Trip Type</p>
                     <select onChange={roundtrip} name="tripType" id="round" className="form-select">
@@ -29,7 +29,7 @@ const SummaryBox = () => {
                 <div className="col-4 d-flex">
                     <div className="flex-fill">
                     <p className="mb-0">From</p>
-                    <select defaultValue="value" className="form-select " id="from">
+                    <select defaultValue="Bengaluru, IN" className="form-select " id="from">
                         <option value="default">Choose an airport</option>
                         <option value="Bengaluru, IN">Bengaluru, IN</option>
                         <option value="New Delhi, IN">New Delhi, IN</option>
@@ -38,10 +38,10 @@ const SummaryBox = () => {
                         <option value="Mumbai, IN">Mumbai, IN</option>
                     </select>
                     </div>
-                    <button onClick={handleRev} className="btn btn-primary btn-sm my-auto">⥦</button>
+                    <button onClick={handleRev} className="btn btn-primary btn-sm my-auto align-items-center">⥦</button>
                     <div className="flex-fill">
                     <p className="mb-0">To</p>
-                    <select defaultValue="default" className="form-select flex-fill" id="to">
+                    <select defaultValue="New Delhi, IN" className="form-select flex-fill" id="to">
                         <option value="default">Choose an airport</option>
                         <option value="Bengaluru, IN">Bengaluru, IN</option>
                         <option value="New Delhi, IN">New Delhi, IN</option>
@@ -57,7 +57,7 @@ const SummaryBox = () => {
                 </div> */}
                 <div className="col">
                     <p className="mb-0">Departure</p>
-                    <input type="date" className="form-control" />
+                    <input type="text" className="form-control" Value="20/04/2022" />
                 </div>
                 <div id="return-date" className="col">
                     <p className="mb-0">Return</p>
@@ -65,7 +65,7 @@ const SummaryBox = () => {
                 </div>
                 <div className="col">
                     <p className="mb-0">Passengers</p>
-                    <input type="number" min={1} className="form-control" />
+                    <input type="number" min={1} className="form-control" defaultValue="2"/>
                 </div>
                 <div className="col">
                     <p className="mb-0">Class</p>

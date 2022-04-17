@@ -37,6 +37,7 @@ header {
   display: flex;
   align-items: center;
   margin-bottom: 0%;
+  color: #ffffff;
 }
 
 .nav-links li {
@@ -111,6 +112,13 @@ header {
 .filter-plane *{
   margin: 20px;
   align-items: center;
+}
+
+
+.sum-box *{
+  margin: 10px;
+  font-weight: 550;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 950px) {

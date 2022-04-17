@@ -12,11 +12,12 @@ import PassengerDetails from './components/PassengerDetails'
 import PassengerInput from './components/PassengerInput'
 import SummaryBox from './components/SummaryBox' 
 import {useState} from "react";
-import { Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import SearchScreen from './screens/SearchScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import DisplayScreen from './screens/DisplayScreen';
+import BookingScreen from './screens/BookingScreen'
 
 function App() {
   const tabs = [
@@ -24,14 +25,7 @@ function App() {
     id:1,
     name: "Home"
   },
-  {
-    id:2,
-    name: "About"
-  },
-  {
-    id:3,
-    name: "Logout"
-  },
+
   ]
 
 
@@ -61,7 +55,7 @@ function App() {
 
   var prices = []
   for(let i in flights_un){
-      prices.push(rand(200, 1000))
+      prices.push(rand(14000, 25000))
   }
   
 
@@ -79,43 +73,53 @@ function App() {
       console.log(email)
   }
 
-  return (
-    <div>
-       {/* <Nav tabs={tabs}/> */}
-       {/* <Nav tabs={tabs}/> */}
+  const [tripType, setTripType] = useState("one-way")
+  const [fromTo, setFromTo] = useState()
+  const [dates, setDates] = useState()
+  const [nop, setNop] = useState()
 
-       {/* <FlightFilter props={[names, company, setCompany, flights, setFlights, flights_un, priceIdx, setPriceIdx, prices]}/> */}
+  // return (
+  //   <div>
+  //      {/* <Nav tabs={tabs}/> */}
+  //      {/* <Nav tabs={tabs}/> */}
 
-      {/* <Login onAdd = {signIn}/>  */}
-      {/* <DispFlights props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices]}/> */}
-      {/* <SearchBox/> */}
-      {/* <SearchFlights/> */}
-      {/* <Searchtabs/> */}
-      {/* <FareDetails/> */}
-      {/* <PassengerDetails/> */}
-      {/* <PassengerInput/> */}
-      {/* <SummaryBox/> */}
-      {/* <LoginScreen props={tabs}/> */}
-      {/* <SignUpScreen props={tabs}/> */}
-      <DisplayScreen props={[[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices], [names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices], tabs]}/>
-    </div>
-  );
+  //      {/* <FlightFilter props={[names, company, setCompany, flights, setFlights, flights_un, priceIdx, setPriceIdx, prices]}/> */}
+
+  //     {/* <Login onAdd = {signIn}/>  */}
+  //     {/* <DispFlights props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices]}/> */}
+  //     {/* <SearchBox/> */}
+  //     {/* <SearchFlights/> */}
+  //     {/* <Searchtabs/> */}
+  //     {/* <FareDetails/> */}
+  //     {/* <PassengerDetails/> */}
+  //     {/* <PassengerInput/> */}
+  //     {/* <SummaryBox/> */}
+  //     {/* <LoginScreen props={tabs}/> */}
+  //     {/* <SignUpScreen props={tabs}/> */}
+  //     {/* <DisplayScreen props={[[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices], [names, company, setCompany, flights, setFlights, flights_un, priceIdx, setPriceIdx, prices], tabs]}/> */}
+  //     {/* <SearchScreen props={[tabs]}/> */}
+      
+  //     {/* <PassengerDetails/> */}
+  //     {/* <PassengerInput/> */}
+
+  //   </div>
+  // );
   
     //    <BookingScreen props = {[tabs]} />
 
-  // return (
-  //   <BrowserRouter>
-  //     <Routes>
-  //       <Route path="/" element={<SearchScreen props={[tabs]}/>}></Route> 
-  //       <Route path="/login" element={<LoginScreen props={tabs}/>}></Route>
-  //       <Route path="/sign" element={<SignUpScreen props={tabs}/>}></Route>
-  //       <Route path="/view_flights" element={<DisplayScreen props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices, tabs]}/>}></Route>
-  //       <Route path="/book" element={<BookingScreen props={[tabs]}/>}></Route>
-  //     </Routes>
-  //   </BrowserRouter>
+  return (
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<SearchScreen props={[tabs, tripType, setTripType, dates, setDates]}/>}></Route> 
+        <Route path="/login" element={<LoginScreen props={tabs}/>}></Route>
+        <Route path="/sign" element={<SignUpScreen props={tabs}/>}></Route>
+        <Route path="/view_flights" element={<DisplayScreen props={[[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices], [names, company, setCompany, flights, setFlights, flights_un, priceIdx, setPriceIdx, prices], tabs]}/>} />
+        <Route path="/book" element={<BookingScreen props={[tabs]}/>}></Route>      
+    </Routes>
+    </BrowserRouter>
 
 
-  // );
+  );
 }
 
 export default App;

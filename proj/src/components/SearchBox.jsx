@@ -1,14 +1,16 @@
 import SearchFlights from "./SearchFlights";
 import Searchtabs from "./Searchtabs";
+// import Back from "../assets/luggage3.png"
+
 
 const SearchBox = () => {
+
     return ( 
-        <>
-        <div className="container rounded border border-primary" style={{paddingTop: "180px", paddingRight: "40px"}}>
+        
+        <div className="container rounded " style={{marginLeft: "10%", marginTop:"8%", width: "600px"}}>
         <Searchtabs />
         <SearchFlights />
         </div>
-        </>
      );
 }
  

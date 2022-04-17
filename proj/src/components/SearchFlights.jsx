@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
 const SearchFlights = () => {
 
+    const navigate = useNavigate()
     const [ret, setRet] = useState(false)
     function roundtrip() {
         const round = document.querySelector("#round")
@@ -20,9 +22,13 @@ const SearchFlights = () => {
         fromSelect.value = toSelect.value
         toSelect.value = temp
     }
+
+    function handleClk(){
+        navigate("/view_flights")
+    }
     return ( 
         <>
-        <div className="container m-3">
+        <div className="container sum-box">
             <div  >
                 <ul className="row list-unstyled">
                     <li className="col" >
@@ -86,8 +92,7 @@ const SearchFlights = () => {
                 </div>
             </div>
             <div className="row">
-            <button className="btn px-0 btn-primary mt-2 mx-2">Search Flights</button>
-        </div></div>
+            <button onClick={handleClk} className="btn px-0 btn-primary mt-2 mx-2">Search Flights</button>        </div></div>
         </>
      );
 }

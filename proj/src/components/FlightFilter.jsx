@@ -60,7 +60,7 @@ const FlightFilter = ({props}) => {
         console.log(checkbox)
         for(let i=1; i<props[5].length; i++){
             if(checkbox[(i)%4]){
-                temp2.push(props[5][i-1])
+                temp2.push(props[5][i])
             }
         }
         props[4](temp2)

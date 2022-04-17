@@ -8,8 +8,9 @@ const DisplayScreen = ({props}) => {
   return (
     <div>
         <Nav tabs={props[2]}/>
-        <SummaryBox/>
         <FlightFilter props={props[1]}/>
+        <SummaryBox/>
+
         <DispFlights props={props[0]}/>
     </div>
   )
