@@ -1,6 +1,7 @@
 
 import Back from "../assets/runway.jpg"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // import "../assets/styles/login.css"
 
@@ -19,6 +20,7 @@ const Login = ({onAdd}) => {
   };
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const navigate = useNavigate()
   
 
   const validateEmail = (mail) => {
@@ -39,6 +41,7 @@ const Login = ({onAdd}) => {
     if(!password){
       alert('Please enter a password')
     }
+    navigate(-1)
     onAdd({email, password})
     setEmail('')
     setPassword('')

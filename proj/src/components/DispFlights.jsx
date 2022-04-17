@@ -3,13 +3,14 @@ import india from '../assets/india.png'
 import luf from '../assets/luf.jpeg'
 import emi from '../assets/emirates.png'
 import indgo from '../assets/indigo.jpeg'
+import { useNavigate } from 'react-router-dom'
 
 
 const DispFlights = ({props}) => {
 
     const imgs = [emi, indgo, india, luf]
     // const names = props[0]
-
+    const navigate = useNavigate()
     // const from = props[1]
     // const to = props[2]
     // const dep_date = props[3]
@@ -52,7 +53,7 @@ const DispFlights = ({props}) => {
                             <div className='card-body '>
                                 <h5 className='card-title' style={{color: "#53486b", fontSize: "25px"}}><b>{names[flight.number%4][0]}</b></h5>
                                 <p className='cad-text'><b>Price</b>{" : "+ prices[flight.number]}</p>
-                                <a className='btn btn-primary'>enter</a>
+                                <a onClick={()=>navigate("/book")} className='btn btn-primary'>enter</a>
                             </div>
                         </div>
                     </div>

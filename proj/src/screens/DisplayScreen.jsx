@@ -3,13 +3,14 @@ import SummaryBox from "../components/SummaryBox"
 import FlightFilter from "../components/FlightFilter"
 import DispFlights from "../components/DispFlights"
 
-const DisplayScreen = () => {
+const DisplayScreen = ({props}) => {
+
   return (
     <div>
-        <Nav/>
+        <Nav tabs={props[2]}/>
         <SummaryBox/>
-        <FlightFilter/>
-        <DispFlights/>
+        <FlightFilter props={props[1]}/>
+        <DispFlights props={props[0]}/>
     </div>
   )
 }

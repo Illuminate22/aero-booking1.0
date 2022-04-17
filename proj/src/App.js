@@ -12,26 +12,19 @@ import PassengerDetails from './components/PassengerDetails'
 import PassengerInput from './components/PassengerInput'
 import SummaryBox from './components/SummaryBox' 
 import {useState} from "react";
-import { Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import SearchScreen from './screens/SearchScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import DisplayScreen from './screens/DisplayScreen';
+import BookingScreen from './screens/BookingScreen'
 
 function App() {
   const tabs = [
   {
     id:1,
     name: "Home"
-  },
-  {
-    id:2,
-    name: "About"
-  },
-  {
-    id:3,
-    name: "Logout"
-  },
+  }
   ]
 
 
@@ -79,6 +72,12 @@ function App() {
       console.log(email)
   }
 
+  const [tripType, setTripType] = useState("one-way")
+  const [fromTo, setFromTo] = useState()
+  const [dates, setDates] = useState()
+  const [nop, setNop] = useState()
+
+
   // return (
     // <div>
        {/* <Nav tabs={tabs}/> */}
@@ -103,10 +102,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SearchScreen props={[tabs]}/>}></Route> 
+        <Route path="/" element={<SearchScreen props={[tabs, tripType, setTripType, dates, setDates]}/>}></Route> 
         <Route path="/login" element={<LoginScreen props={tabs}/>}></Route>
         <Route path="/sign" element={<SignUpScreen props={tabs}/>}></Route>
-        <Route path="/view_flights" element={<DisplayScreen props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices, tabs]}/>}></Route>
+        <Route path="/view_flights" element={<DisplayScreen props={[[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices], [names, company, setCompany, flights, setFlights, flights_un, priceIdx, setPriceIdx, prices], tabs]}/>} />
         <Route path="/book" element={<BookingScreen props={[tabs]}/>}></Route>
       </Routes>
     </BrowserRouter>
