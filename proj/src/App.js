@@ -7,7 +7,7 @@ import SearchBox from './components/SearchBox';
 import SearchFlights from './components/SearchFlights';
 import Searchtabs from './components/Searchtabs';
 import FlightFilter from './components/FlightFilter';
-
+import {useState} from "react";
 
 function App() {
   const tabs = [
@@ -25,22 +25,54 @@ function App() {
   },
   ]
 
+  const flights = [];
+  for(let i =0; i<25; i++){
+    flights.push({company: String.fromCharCode(i+97), number: i+97})
+    // console.log(String.fromCharCode(i))
+  }
+  const names = [
+    [
+      "Emirates",0
+    ],
+    [
+      "Indigo",1
+    ],
+    [
+      "Air India",2
+    ],
+    [
+      "Lufthansa",3
+    ]
+  ]
+   
+
+  
+
+  const from = "Delhi"
+  const to = "Bangalore"
+  const dep_date = "12/05/2022"
+  const arr_date = "14/05/2022"
+
+  const [company, setCompany] = useState(names)
+
+
+
   const signIn = (email) => {
       console.log(email)
   }
 
   return (
     <div>
-       {/* <Nav tabs={tabs}/> */}
        <Nav tabs={tabs}/>
+       {/* <Nav tabs={tabs}/> */}
 
-       
+       <FlightFilter props={[names, company, setCompany]}/>
+
       {/* <Login onAdd = {signIn}/>  */}
-      <DispFlights/>
+      <DispFlights props={[names, company, from, to, dep_date, arr_date, flights]}/>
       {/* <SearchBox/> */}
       {/* <SearchFlights/> */}
       {/* <Searchtabs/> */}
-      {/* <FlightFilter/> */}
     </div>
   );
 }

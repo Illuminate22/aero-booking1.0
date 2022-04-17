@@ -19,6 +19,7 @@ const Login = ({onAdd}) => {
   };
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  
 
   const validateEmail = (mail) => {
     return String(mail)
