@@ -1,7 +1,6 @@
 
 import Back from "../assets/runway.jpg"
 import { useState } from "react";
-import Nav from "Nav"
 
 // import "../assets/styles/login.css"
 
@@ -47,11 +46,11 @@ const SignUp = ({onAdd}) => {
 
   return(
     <>
-    <Nav/>
+    {/* <Nav/> */}
     <main className='d-flex text-center min-vh-100 nav-pad' style={sectionStyle}>
       <div className="container d-flex">
         <div className="loginbox">
-          <h2>Login</h2>
+          <h2>Sign Up</h2>
                  <form className='form-container'>
            <div className='form-group'>
              <input type="email" className='form-control' placeholder='Enter email' required value={email} onChange={(e) => setEmail(e.target.value)}></input>
@@ -60,9 +59,11 @@ const SignUp = ({onAdd}) => {
              <input type="password" className='form-control' placeholder='Password' required value={password} onChange={(e) => setPassword(e.target.value)}></input>
            </div>
            <div className='form-group'>
-             <a href='#' style={{textDecoration: "none"}}>Forgot password?</a>
+             <input type="password" className='form-control' placeholder='Confirm Password' required value={password} onChange={(e) => setPassword(e.target.value)}></input>
+           </div>
+           <div className='form-group'>
           </div>
-           <input className="w-100 btn btn-lg btn-dark border-white" id="sub_log" type="submit" name='' value="Login" onClick={onSubmit}/>
+           <input className="w-100 btn btn-lg btn-dark border-white" id="sub_log" type="submit" name='' value="Sign Up" onClick={onSubmit}/>
          </form>
         </div>
       </div>

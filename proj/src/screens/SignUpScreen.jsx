@@ -1,9 +1,10 @@
 import SignUp from "../components/SignUp"
 import Nav from "../components/Nav"
-const SignUpScreen = () => {
+const SignUpScreen = ({props}) => {
+    const tab = props
   return (
     <div>
-        <Nav/>
+        <Nav tabs={tab}/>
         <SignUp/>
     </div>
   )

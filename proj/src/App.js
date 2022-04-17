@@ -79,8 +79,8 @@ function App() {
       console.log(email)
   }
 
-  // return (
-    // <div>
+  return (
+    <div>
        {/* <Nav tabs={tabs}/> */}
        {/* <Nav tabs={tabs}/> */}
 
@@ -95,24 +95,27 @@ function App() {
       {/* <PassengerDetails/> */}
       {/* <PassengerInput/> */}
       {/* <SummaryBox/> */}
-    {/* </div> */}
-  // );
+      {/* <LoginScreen props={tabs}/> */}
+      {/* <SignUpScreen props={tabs}/> */}
+      <DisplayScreen props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices, tabs]}/>
+    </div>
+  );
   
     //    <BookingScreen props = {[tabs]} />
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SearchScreen props={[tabs]}/>}></Route> 
-        <Route path="/login" element={<LoginScreen props={tabs}/>}></Route>
-        <Route path="/sign" element={<SignUpScreen props={tabs}/>}></Route>
-        <Route path="/view_flights" element={<DisplayScreen props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices, tabs]}/>}></Route>
-        <Route path="/book" element={<BookingScreen props={[tabs]}/>}></Route>
-      </Routes>
-    </BrowserRouter>
+  // return (
+  //   <BrowserRouter>
+  //     <Routes>
+  //       <Route path="/" element={<SearchScreen props={[tabs]}/>}></Route> 
+  //       <Route path="/login" element={<LoginScreen props={tabs}/>}></Route>
+  //       <Route path="/sign" element={<SignUpScreen props={tabs}/>}></Route>
+  //       <Route path="/view_flights" element={<DisplayScreen props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices, tabs]}/>}></Route>
+  //       <Route path="/book" element={<BookingScreen props={[tabs]}/>}></Route>
+  //     </Routes>
+  //   </BrowserRouter>
 
 
-  );
+  // );
 }
 
 export default App;

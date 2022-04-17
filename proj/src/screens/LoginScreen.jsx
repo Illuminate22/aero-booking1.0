@@ -3,10 +3,11 @@ import Nav from "../components/Nav"
 
 import { useNavigate } from "react-router-dom"
 
-const LoginScreen = () => {
+const LoginScreen = ({props}) => {
+    const tab = props
   return (
     <div>
-        <Nav/>
+        <Nav tabs={tab}/>
         <Login/>
     </div>
   )
