@@ -97,7 +97,7 @@ function App() {
       {/* <SummaryBox/> */}
       {/* <LoginScreen props={tabs}/> */}
       {/* <SignUpScreen props={tabs}/> */}
-      <DisplayScreen props={[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices, tabs]}/>
+      <DisplayScreen props={[[names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices], [names, company, from, to, dep_date, arr_date, flights, flights_un, priceIdx, prices], tabs]}/>
     </div>
   );
   
