@@ -16,6 +16,7 @@ const PassengerDetails = () => {
     return ( 
     <>
         <div className="container border">
+            <h1>Passenger Details</h1>
             <div className="row">
                 <input type="number" name="numpass" min={1} defaultValue={1} onChange={handleNum} className="col-1" id="numpass" />
                 <label htmlFor="numpass" className="col">Number of Passengers</label>

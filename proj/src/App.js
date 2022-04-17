@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import SearchBox from './components/SearchBox';
 import SummaryBox from './components/SummaryBox';
 import PassengerDetails from './components/PassengerDetails';
+import FareDetails from './components/FareDetails';
 
 function App() {
   const tabs = [
@@ -25,7 +26,7 @@ function App() {
       <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'></link>
       
       <Nav tabs={tabs}/>
-      <PassengerDetails />
+      <FareDetails />
     </div>
   );
 }
