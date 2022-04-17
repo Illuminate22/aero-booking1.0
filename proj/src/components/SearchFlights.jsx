@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const SearchFlights = () => {
 
-    const [ret, setRet] = useState(false)
+    
     function roundtrip() {
         const round = document.querySelector("#round")
         const retrn = document.querySelector("#returnDate")
@@ -40,8 +40,8 @@ const SearchFlights = () => {
             <div className="row">
                 <div className="col">
                     <p>From</p>
-                    <select className="form-select" id="from">
-                        <option selected>Choose an airport</option>
+                    <select defaultValue="default" className="form-select" id="from">
+                        <option value="default">Choose an airport</option>
                         <option value="Bengaluru, IN">Bengaluru, IN</option>
                         <option value="New Delhi, IN">New Delhi, IN</option>
                         <option value="Chennai, IN">Chennai, IN</option>
@@ -52,8 +52,8 @@ const SearchFlights = () => {
                 <button onClick={handleRev} className="btn btn-primary btn-sm m-1 col-1">rev</button>
                 <div className="col">
                     <p>To</p>
-                    <select className="form-select" id="to">
-                        <option selected>Choose an airport</option>
+                    <select defaultValue="default" className="form-select" id="to">
+                        <option value="default">Choose an airport</option>
                         <option value="Bengaluru, IN">Bengaluru, IN</option>
                         <option value="New Delhi, IN">New Delhi, IN</option>
                         <option value="Chennai, IN">Chennai, IN</option>
@@ -75,7 +75,7 @@ const SearchFlights = () => {
             <div className="row">
                 <div className="col">
                     <p>Number of Passengers</p>
-                    <input type="number" className="form-control" />
+                    <input type="number" min={1} className="form-control" />
                 </div>
                 <div className="col">
                     <p>Class</p>

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Nav';
 import SearchBox from './components/SearchBox';
+import SummaryBox from './components/SummaryBox';
 
 function App() {
   const tabs = [
@@ -23,6 +24,7 @@ function App() {
       <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'></link>
       
       <Nav tabs={tabs}/>
+      <SummaryBox />
     </div>
   );
 }
