@@ -4,7 +4,7 @@ import Searchtabs from "./Searchtabs";
 const SearchBox = () => {
     return ( 
         <>
-        <div className="container rounded border border-primary" style={{paddingTop: "150px", paddingRight: "40px"}}>
+        <div className="container rounded border border-primary" style={{paddingTop: "180px", paddingRight: "40px"}}>
         <Searchtabs />
         <SearchFlights />
         </div>

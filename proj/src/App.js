@@ -12,6 +12,8 @@ import PassengerDetails from './components/PassengerDetails'
 import PassengerInput from './components/PassengerInput'
 import SummaryBox from './components/SummaryBox' 
 import {useState} from "react";
+import SearchScreen from './screens/SearchScreen';
+import BookingScreen from './screens/BookingScreen';
 
 function App() {
   const tabs = [
@@ -67,13 +69,14 @@ function App() {
 
   return (
     <div>
-       <Nav tabs={tabs}/>
+       {/* <Nav tabs={tabs}/> */}
        {/* <Nav tabs={tabs}/> */}
 
-       <FlightFilter props={[names, company, setCompany]}/>
-
+       {/* <FlightFilter props={[names, company, setCompany]}/> */}
+      {/* <SearchScreen props={[tabs]} /> */}
+      <BookingScreen props = {[tabs]} />
       {/* <Login onAdd = {signIn}/>  */}
-      <DispFlights props={[names, company, from, to, dep_date, arr_date, flights]}/>
+      {/* <DispFlights props={[names, company, from, to, dep_date, arr_date, flights]}/> */}
       {/* <SearchBox/> */}
       {/* <SearchFlights/> */}
       {/* <Searchtabs/> */}

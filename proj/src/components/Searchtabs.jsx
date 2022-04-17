@@ -28,9 +28,6 @@ const Searchtabs = () => {
   <li className="nav-item">
     <a onClick={() => clickedLink(0)} className={"nav-link " + (tabs[0].active ? "active" : "")} >Flights</a>
   </li>
-  <li className="nav-item">
-    <a onClick={() => clickedLink(1)} className={"nav-link " + (tabs[1].active ? "active" : "")} >Hotels</a>
-  </li>
 </ul>
     </> );
 }

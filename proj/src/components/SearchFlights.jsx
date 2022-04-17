@@ -49,7 +49,7 @@ const SearchFlights = () => {
                         <option value="Mumbai, IN">Mumbai, IN</option>
                     </select>
                 </div>
-                <button onClick={handleRev} className="btn btn-primary btn-sm m-1 col-1">rev</button>
+                <button onClick={handleRev} className="btn btn-primary btn-sm m-1 col-1">⥦</button>
                 <div className="col">
                     <p>To</p>
                     <select className="form-select" id="to">
