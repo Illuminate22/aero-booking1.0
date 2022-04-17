@@ -1,5 +1,6 @@
 
 import Back from "../assets/runway.jpg"
+// import "../assets/styles/login.css"
 
 const Login = () => {
   var sectionStyle = {
@@ -16,9 +17,9 @@ const Login = () => {
   };
 
   return(
-    <main className='d-flex text-center min-vh-100' style={sectionStyle}>
+    <main className='d-flex text-center min-vh-100 nav_pad' style={sectionStyle}>
       <div className="container d-flex">
-        <div class="loginbox">
+        <div className="loginbox">
           <h2>Login</h2>
                  <form className='form-container'>
            <div className='form-group'>

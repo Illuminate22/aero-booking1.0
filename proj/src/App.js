@@ -1,8 +1,8 @@
 import './App.css';
 
-// import DispFlights from './components/DispFlights';
-import Nav from "./components/Nav";
+import Nav from './components/Nav';
 import Login from './components/Login';
+import DispFlights from './components/DispFlights';
 
 function App() {
   const tabs = [
@@ -20,10 +20,14 @@ function App() {
   },
   ]
   return (
-    <div className="App">
-      <Login/>
-      <Nav/>
-      {/* <DispFlights/> */}
+    <div>
+       <Nav tabs={tabs}/>
+       {/* <Nav tabs={tabs}/> */}
+
+       
+      {/* <Login/>  */}
+      <DispFlights/>
+
     </div>
   );
 }
