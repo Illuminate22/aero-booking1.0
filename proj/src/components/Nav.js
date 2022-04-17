@@ -4,7 +4,7 @@ const Nav = ({tabs}) => {
             {/* <a className="logo">Aero</a> */}
             <nav>
                 <ul className="nav-links">
-                    {tabs.map((tab) => (<li><a href="#">{tab.name}</a></li>))}
+                    {tabs.map((tab) => (<li><a href="#" key={tab.name}>{tab.name}</a></li>))}
                 </ul>
             </nav>
             <nav className="nav-right">
