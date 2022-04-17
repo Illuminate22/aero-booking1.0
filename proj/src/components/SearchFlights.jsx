@@ -5,18 +5,20 @@ const SearchFlights = () => {
     const [ret, setRet] = useState(false)
     function roundtrip() {
         const round = document.querySelector("#round")
-        // console.log(round)
-        // if(round){
-        //     console.log(round)
-        // }
+        const retrn = document.querySelector("#returnDate")
+        if(round.checked){
+            retrn.disabled = false
+        }
+        else{
+            retrn.disabled = true
+        }
     }
     function handleRev(){
         const fromSelect = document.getElementById("from")
-        console.log(fromSelect)
         const toSelect = document.getElementById("to")
-        // const temp = fromSelect.value
-        // fromSelect.value = toSelect.value
-        // toSelect.value = temp
+        const temp = fromSelect.value
+        fromSelect.value = toSelect.value
+        toSelect.value = temp
     }
     return ( 
         <>
@@ -24,12 +26,12 @@ const SearchFlights = () => {
             <div  >
                 <ul className="row list-unstyled">
                     <li className="col" >
-                        <label htmlFor="one-way" className="my-0 ms-3" >
-                            <input type="radio" name="trip-type" id="one-way" autoComplete="off"  />One-way
+                        <label htmlFor="one-way" onClick={roundtrip} className="my-0 ms-3" >
+                            <input type="radio" defaultChecked name="trip-type" id="one-way" autoComplete="off"  />One-way
                         </label>
                     </li>
                     <li id="round-trip" className="col">
-                        <label htmlFor="round" className="my-0 ms-3">
+                        <label htmlFor="round" onClick={roundtrip} className="my-0 ms-3">
                             <input type="radio" name="trip-type" id="round" autoComplete="off"  /> Round-trip
                         </label>
                     </li>
@@ -47,7 +49,7 @@ const SearchFlights = () => {
                         <option value="Mumbai, IN">Mumbai, IN</option>
                     </select>
                 </div>
-                <button onClick={handleRev()} className="btn btn-primary btn-sm m-1 col-1">rev</button>
+                <button onClick={handleRev} className="btn btn-primary btn-sm m-1 col-1">rev</button>
                 <div className="col">
                     <p>To</p>
                     <select className="form-select" id="to">
@@ -67,7 +69,7 @@ const SearchFlights = () => {
                 </div>
                 <div id="return-date" className="col">
                     <p>Return</p>
-                    <input type="date" disabled className="form-control" />
+                    <input type="date" id="returnDate" disabled className="form-control" />
                 </div>
             </div>
             <div className="row">
@@ -84,7 +86,7 @@ const SearchFlights = () => {
                 </div>
             </div>
             <div className="row">
-            <button className="btn px-0 btn-primary mt-2">Search Flights</button>
+            <button className="btn px-0 btn-primary mt-2 mx-2">Search Flights</button>
         </div></div>
         </>
      );

@@ -15,10 +15,10 @@ const Searchtabs = () => {
     const [tabs, setTabs] = useState([
         {id:1,
         name:"Flights",
-        active: false},
+        active: true},
         {id:2,
         name:"Hotels",
-        active: true}
+        active: false}
     ]);
 
 

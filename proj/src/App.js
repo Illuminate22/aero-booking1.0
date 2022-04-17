@@ -23,7 +23,6 @@ function App() {
       <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'></link>
       
       <Nav tabs={tabs}/>
-      
     </div>
   );
 }
